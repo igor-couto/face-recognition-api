@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FaceRecognitionAPI</name>
+    </assembly>
+    <members>
+        <member name="M:FaceRecognitionAPI.Controllers.ValuesController.Get">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+    </members>
+</doc>
