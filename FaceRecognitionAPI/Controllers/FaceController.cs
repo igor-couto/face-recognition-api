@@ -8,13 +8,26 @@ namespace FaceRecognitionAPI.Controllers
     [ApiController]
     public class FaceController : ControllerBase
     {
-        [HttpGet("{id}")]
-        public ActionResult<Bitmap> Get(int id)
+        /// <summary>
+        /// Get person face by it name
+        /// </summary>
+        /// <param name="name">Person name</param>
+        /// <returns></returns>
+        [HttpGet]
+        public ActionResult Get(string name)
         {
-            //Bitmap face = getFaceById(id);
-            //var byteArray = face.ConvertToByteArray();
-            //return File(byteArray, "image/jpeg");
+            throw new NotImplementedException();
+        }
 
+        /// <summary>
+        /// Submit new face image from a person. If the person already exists, the system will be trained
+        /// </summary>
+        /// <param name="name">Person name</param>
+        /// <param name="faceImage">Person face image</param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult Post(string name, Bitmap faceImage)
+        {
             throw new NotImplementedException();
         }
     }
