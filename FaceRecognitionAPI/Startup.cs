@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
+using FaceRecognitionApplication.Domain.Model.Recognizers;
+using FaceRecognitionApplication.Domain.Model.Classifiers;
+
 
 namespace FaceRecognitionAPI
 {
@@ -23,6 +26,8 @@ namespace FaceRecognitionAPI
         public void ConfigureServices(IServiceCollection services)
         {
             AddSwagger(services);
+            services.AddSingleton<IRecognizer, Eigen>();
+            services.AddSingleton<IClassifier, HaasCascade>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

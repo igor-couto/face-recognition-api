@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using FaceRecognitionApplication.Domain.Model.Classifiers;
+using FaceRecognitionApplication.Domain.Model.Recognizers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FaceRecognitionAPI.Controllers
@@ -8,6 +10,15 @@ namespace FaceRecognitionAPI.Controllers
     [ApiController]
     public class FaceController : ControllerBase
     {
+        private readonly IClassifier _classifier;
+        private readonly IRecognizer _recognizer;
+
+        public FaceController(IClassifier classifier, IRecognizer recognizer)
+        {
+            _classifier = classifier;
+            _recognizer = recognizer;
+        }
+
         /// <summary>
         /// Get person face by it name
         /// </summary>
@@ -17,6 +28,7 @@ namespace FaceRecognitionAPI.Controllers
         public ActionResult Get(string name)
         {
             throw new NotImplementedException();
+            
         }
 
         /// <summary>

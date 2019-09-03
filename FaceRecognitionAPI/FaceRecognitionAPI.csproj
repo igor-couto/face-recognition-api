@@ -20,4 +20,8 @@
     <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\face-recognition-application\FaceRecognitionApplication\FaceRecognitionApplication.csproj" />
+  </ItemGroup>
+
 </Project>
