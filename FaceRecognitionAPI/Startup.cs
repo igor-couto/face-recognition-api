@@ -9,7 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using FaceRecognitionApplication.Domain.Model.Recognizers;
 using FaceRecognitionApplication.Domain.Model.Classifiers;
-
+using FluentValidation;
+using MediatR;
 
 namespace FaceRecognitionAPI
 {
@@ -52,6 +53,24 @@ namespace FaceRecognitionAPI
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 options.IncludeXmlComments(xmlPath);
             });
+        }
+
+        private static void AddMediatr(IServiceCollection services)
+        {
+            var assembly = AppDomain.CurrentDomain.Load("AccuScheduler.Application");
+
+            // Validators.
+            AssemblyScanner
+                .FindValidatorsInAssembly(assembly)
+                .ForEach(result => services.AddScoped(result.InterfaceType, result.ValidatorType));
+
+            // Behaviors
+            var behaviorType = typeof(IPipelineBehavior<,>);
+            var behaviors = assembly.DefinedTypes.Where(t => t.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == behaviorType));
+            foreach (var type in behaviors)
+                services.Add(new ServiceDescriptor(behaviorType, type, ServiceLifetime.Scoped));
+
+            services.AddMediatR(assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

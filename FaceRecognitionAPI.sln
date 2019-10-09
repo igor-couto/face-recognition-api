@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FaceRecognitionAPI", "FaceRecognitionAPI\FaceRecognitionAPI.csproj", "{D4B223E5-8D5F-46C9-88FE-9093DE13F8B5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FaceRecognitionApplication", "..\face-recognition-application\FaceRecognitionApplication\FaceRecognitionApplication.csproj", "{05439C83-9F95-4FD6-8D6E-8CD04D54533B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognitionApplication", "..\face-recognition-application\FaceRecognitionApplication\FaceRecognitionApplication.csproj", "{63F8AE1E-C3B9-4B10-8CF1-7808DC6078AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D4B223E5-8D5F-46C9-88FE-9093DE13F8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4B223E5-8D5F-46C9-88FE-9093DE13F8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4B223E5-8D5F-46C9-88FE-9093DE13F8B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{05439C83-9F95-4FD6-8D6E-8CD04D54533B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05439C83-9F95-4FD6-8D6E-8CD04D54533B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05439C83-9F95-4FD6-8D6E-8CD04D54533B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05439C83-9F95-4FD6-8D6E-8CD04D54533B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F8AE1E-C3B9-4B10-8CF1-7808DC6078AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F8AE1E-C3B9-4B10-8CF1-7808DC6078AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F8AE1E-C3B9-4B10-8CF1-7808DC6078AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F8AE1E-C3B9-4B10-8CF1-7808DC6078AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
